@@ -1,5 +1,5 @@
 # FixVmpDump
-use python script to fix vmp dump api in ida
+use python script to fix vmp dump api in ida. support x86 and x64.
 
 # step 1
 (1) open need moudle by ida and run "Get_Export_Fun_Name_Addr.py". you can get "xxx.txt" in your "D:\fix_vmp_dump\".
@@ -21,3 +21,7 @@ use python script to fix vmp dump api in ida
       raise
  
 (3) restart your ida
+
+# step 3
+use hotkey "Shift-F" to fix single api.  
+use hotket "Shift-G" to fix all api.(use carefully!)
