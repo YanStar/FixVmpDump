@@ -329,6 +329,7 @@ def Run_2():
     for func in idautils.Functions():
         hex_list = []
         code_list = []
+        flag_list = []
         ea = idc.ScreenEA()
 
         if(len(str(hex(ea)))) < 15:
@@ -339,7 +340,7 @@ def Run_2():
             read_db_path = "D:\\fix_vmp_dump\\ntoskrnl.txt"
         try:
             Get_Code_List(func,code_list,os_len)
-            fun_addr = Get_Need_Addr(code_list,hex_list,os_len)
+            fun_addr = Get_Need_Addr(code_list,hex_list,os_len,flag_list)
             Fix_Fun_Name(func,read_db_path,fun_addr)
         except:
             pass
